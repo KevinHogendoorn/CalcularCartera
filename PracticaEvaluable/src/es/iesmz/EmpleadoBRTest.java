@@ -51,4 +51,39 @@ class EmpleadoBRTest {
         float resultadoEsperado = 840;
         assertEquals(resultadoEsperado, resultadoReal);
     }
+
+    @Test
+    public void calcularSalarioNeto6(){
+        float resultadoReal = EmpleadoBR.calcularSalarioNeto((float) 999.99);
+        float resultadoEsperado = (float) 999.99;
+        assertEquals(resultadoEsperado, resultadoReal);
+    }
+
+    @Test
+    public void calcularSalarioNeto7(){
+        float resultadoReal = EmpleadoBR.calcularSalarioNeto(500);
+        float resultadoEsperado = 500;
+        assertEquals(resultadoEsperado, resultadoReal);
+    }
+
+    @Test
+    public void calcularSalarioNeto8(){
+        float resultadoReal = EmpleadoBR.calcularSalarioNeto(0);
+        float resultadoEsperado = 0;
+        assertEquals(resultadoEsperado, resultadoReal);
+    }
+
+    @Test
+    public void calcularSalarioNeto9(){
+        float resultadoReal = EmpleadoBR.calcularSalarioNeto(-1);
+        float resultadoEsperado = -1;
+        assertEquals(resultadoEsperado, resultadoReal);
+    }
+
+    @Test
+    public void calcularSalarioBruto1(){
+        float resultadoReal = EmpleadoBR.calcularSalarioBruto(TipoEmpleado.vendedor, 2000, 8);
+        float resultadoEsperado = 1360;
+        assertEquals(resultadoEsperado, resultadoReal);
+    }
 }
